@@ -1,8 +1,6 @@
 @font-face {
 	font-family: 'Open Sans', sans-serif; 
   src: url();
-  font-family: 'GalanoGrotesque-Bold';
-  src: url();
 }
 * {
   box-sizing:border-box;
@@ -10,22 +8,43 @@
   padding: 0;
 }
 .container {
-  width: 1229px;
+  position:relative;
+  width:100%;
   margin: 0 auto;
-  position: relative;
+  height:auto;
 }
 .waiting {
-  &_wrapper {
-    margin-top: 55px;
+  &__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
-    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 100px;
+    @media (max-width: 1200px) {
+      gap: 60px;
+    }
+    @media (max-width: 992px) {
+      gap: 40px;
+    }
+    @media (max-width: 768px) {
+      gap: 20px;
+    }
   }
-  &_item {
+  
+  &__item {
     width: 343px;
+    @media (max-width: 1200px) {
+      width: 300px;
+    }
+    @media (max-width: 992px) {
+      width: 275px;
+    }
+    @media (max-width: 768px) {
+      width: 220px;
+    }
   }
-  &_title {
+  &__title {
     margin-top: 22px;
     font-family: 'Open Sans';
     font-style: normal;
@@ -34,8 +53,18 @@
     line-height: 23px;
     text-transform: uppercase;
     color: #312E2E;
+    @media (max-width: 1200px) {
+      font-size: 16px;
+    }
+    @media (max-width: 992px) {
+      font-size: 13px;
+    }
+    @media (max-width: 768px) {
+      font-size: 13px;
+      margin-top: 8px;
+    }
   }
-  &_descr {
+  &__descr {
     margin-top: 28px;
     font-family: 'Open Sans';
     font-style: normal;
@@ -44,16 +73,23 @@
     line-height: 26px;
     color: #5C5C5C;
     margin-bottom: 52px;
+    @media (max-width: 1200px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    @media (max-width: 992px) {
+      margin-top: 18px;
+      font-size: 12px;
+      line-height: 22px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 8px;
+      font-size: 13px;
+      line-height: 20px;
+      margin-bottom: 25px;
+    }
   }
-  &_wrapper_1 {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  &_link {
+  &__link {
     display: block;
     margin-top: 28px;
     font-family: 'GalanoGrotesque-Bold';
@@ -63,6 +99,11 @@
     text-transform: capitalize;
     text-decoration: none;
     color: #4343FF;
+    @media (max-width: 992px) {
+      margin-top: 18px;
+      font-size: 13px;
+      line-height: 15px;
+    }
   }
 }
-@import 'blocks/media';
+// @import 'blocks/media';
