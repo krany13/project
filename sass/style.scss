@@ -254,7 +254,6 @@
     }
     @media (max-width: 575px) {
       flex-direction: column;
-
     }
   }
   img {
@@ -268,7 +267,7 @@
   margin-top: 50px;
   &__items {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     max-width: 927px;
     background: #0079C8;
     border-radius: 4px;
@@ -280,17 +279,18 @@
       margin-left: 50px;
     }
     @media (max-width: 575px) {
+      flex-direction: column;
       margin-left: 14px;
+      margin-right: 14px;
     }
   }
   &__item {
     padding: 40px 0 30px 50px;
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       padding: 40px 0 30px 30px;
     }
     @media (max-width: 575px) {
-      margin-bottom: 10px;
-      padding: 30px 15px;
+      padding: 15px 0 0 15px;
     }
   }
   &__title {
@@ -300,9 +300,11 @@
     line-height: 20px;
     color: #FFFFFF;
     margin-bottom: 20px;
+    @media (max-width: 768px) {
+      font-size: 17px;
+    }
     @media (max-width: 575px) {
-      font-size: 15px;
-      line-height: 11px;
+      font-size: 14px;
     }
   }
   &__text {
@@ -312,42 +314,38 @@
     line-height: 44px;
     color: #FFFFFF;
     max-width: 483px;
+    @media (max-width: 768px) {
+      font-size: 27px;
+      line-height: 39px;
+    }
     @media (max-width: 575px) {
-      font-size: 15px;
-      line-height: 32px;
+      font-size: 16px;
+      line-height: 26px;
     }
   }
   &__btn {
-    position: absolute;
     width: 261px;
     height: 56px;
     background: #FFFFFF;
     border-radius: 4px;
     border: none;
-    left: 810px;
-    top: 101px;
-    @media (max-width: 992px) {
-      left: 690px;
-    }
-    @media (max-width: 768px) {
-      width: 205px;
-      height: 45px;
-      left: 540px;
-      top: 121px;
-    }
-    @media (max-width: 575px) {
-      position: static;
-      margin-top: 15px;
-      margin-left: 27px;
-    }
-  }
-  a {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 16px;
     color: #0079C8;
-    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    margin-top: 101px;
+    @media (max-width: 768px) {
+      margin-right: 30px;
+      width: 245px;
+    }
+    @media (max-width: 575px) {
+      margin-top: 10px;
+      margin-bottom: 22px;
+      width: 244px;
+    }
   }
 }
 // @import 'blocks/media';
